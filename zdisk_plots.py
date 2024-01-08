@@ -27,7 +27,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import linearrepeatmodels as linmods
-import zdisk_modelling
+# import zdisk_modelling
 from modelling_general import kde_1nm
 from modelling_general import pairwise_correlation_1d
 from modelling_general import stdev_of_model
@@ -37,6 +37,8 @@ from zdisk_modelling import getaxialseparations_no_smoothing
 from zdisk_modelling import remove_duplicates
 from zdisk_modelling import set_up_model_4_variable_peaks_with_fit_settings
 from zdisk_modelling import set_up_model_5_variable_peaks_with_fit_settings
+from zdisk_modelling import set_up_model_5_variable_peaks_with_replocs_bg_flat_with_fit_settings
+from zdisk_modelling import set_up_model_5_variable_peaks_after_offset_flat_bg_with_fit_settings
 from zdisk_modelling import fitmodel_to_hist
 
 
@@ -474,7 +476,7 @@ def actn_mEos_x_plot():
     # model_with_info = set_up_model_5_variable_peaks_with_fit_settings()
     # model_with_info = zdisk_modelling.set_up_model_5_variable_peaks_with_fit_settings()
     # model_with_info = zdisk_modelling.set_up_model_5_variable_peaks_bg_flat_with_fit_settings()
-    model_with_info = zdisk_modelling.set_up_model_5_variable_peaks_with_replocs_bg_flat_with_fit_settings()
+    model_with_info = set_up_model_5_variable_peaks_with_replocs_bg_flat_with_fit_settings()
     # model_with_info = zdisk_modelling.set_up_model_5_peaks_fixed_ratio_with_fit_settings()
     # model_with_info = zdisk_modelling.set_up_model_5_peaks_fixed_ratio_no_replocs_with_fit_settings()
     # model_with_info = zdisk_modelling.set_up_model_linear_fit_plusreplocs_with_fit_settings()
@@ -574,7 +576,7 @@ def lasp_mEos_plot():
     # model_with_info = set_up_model_5_variable_peaks_with_fit_settings()
     # model_with_info = set_up_model_5_variable_peaks_after_offset_with_fit_settings()
     # model_with_info = set_up_model_linear_fit_with_fit_settings()
-    model_with_info = zdisk_modelling.set_up_model_5_variable_peaks_after_offset_flat_bg_with_fit_settings()
+    model_with_info = set_up_model_5_variable_peaks_after_offset_flat_bg_with_fit_settings()
 
     # Plot histogram and kde for axial separations
     plt.figure(figsize=[3*2.54, 2*2.54])
